@@ -254,11 +254,11 @@ Quando se trata de configurações do sistema, você precisará gerenciar os seg
 
 - [.env](./docker/.env): Contém as configurações fundamentais para o sistema, como `SVR_HTTP_PORT`, `MYSQL_PASSWORD` e `MINIO_PASSWORD`.
 - [service_conf.yaml.template](./docker/service_conf.yaml.template): Configura os serviços de back-end. As variáveis de ambiente neste arquivo serão automaticamente preenchidas quando o contêiner Docker for iniciado. Quaisquer variáveis de ambiente definidas dentro do contêiner Docker estarão disponíveis para uso, permitindo personalizar o comportamento do serviço com base no ambiente de implantação.
-- [docker-compose.yml](./docker/docker-compose.yml): O sistema depende do [docker-compose.yml](./docker/docker-compose.yml) para iniciar.
+- [docker-compose.yml](docker/docker-compose-x86.yml): O sistema depende do [docker-compose.yml](docker/docker-compose-x86.yml) para iniciar.
 
 > O arquivo [./docker/README](./docker/README.md) fornece uma descrição detalhada das configurações do ambiente e dos serviços, que podem ser usadas como `${ENV_VARS}` no arquivo [service_conf.yaml.template](./docker/service_conf.yaml.template).
 
-Para atualizar a porta HTTP de serviço padrão (80), vá até [docker-compose.yml](./docker/docker-compose.yml) e altere `80:80` para `<SUA_PORTA_DE_SERVIÇO>:80`.
+Para atualizar a porta HTTP de serviço padrão (80), vá até [docker-compose.yml](docker/docker-compose-x86.yml) e altere `80:80` para `<SUA_PORTA_DE_SERVIÇO>:80`.
 
 Atualizações nas configurações acima exigem um reinício de todos os contêineres para que tenham efeito:
 

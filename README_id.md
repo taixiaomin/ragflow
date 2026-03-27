@@ -259,9 +259,9 @@ Untuk konfigurasi sistem, Anda perlu mengelola file-file berikut:
 - [.env](./docker/.env): Menyimpan pengaturan dasar sistem, seperti `SVR_HTTP_PORT`, `MYSQL_PASSWORD`, dan
   `MINIO_PASSWORD`.
 - [service_conf.yaml.template](./docker/service_conf.yaml.template): Mengonfigurasi aplikasi backend.
-- [docker-compose.yml](./docker/docker-compose.yml): Sistem ini bergantung pada [docker-compose.yml](./docker/docker-compose.yml) untuk memulai.
+- [docker-compose.yml](docker/docker-compose-x86.yml): Sistem ini bergantung pada [docker-compose.yml](docker/docker-compose-x86.yml) untuk memulai.
 
-Untuk memperbarui port HTTP default (80), buka [docker-compose.yml](./docker/docker-compose.yml) dan ubah `80:80`
+Untuk memperbarui port HTTP default (80), buka [docker-compose.yml](docker/docker-compose-x86.yml) dan ubah `80:80`
 menjadi `<YOUR_SERVING_PORT>:80`.
 
 Pembaruan konfigurasi ini memerlukan reboot semua kontainer agar efektif:

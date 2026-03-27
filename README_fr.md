@@ -252,11 +252,11 @@ En ce qui concerne les configurations système, vous devrez gérer les fichiers 
 
 - [.env](./docker/.env) : Conserve les paramètres de base du système, tels que `SVR_HTTP_PORT`, `MYSQL_PASSWORD` et `MINIO_PASSWORD`.
 - [service_conf.yaml.template](./docker/service_conf.yaml.template) : Configure les services back-end. Les variables d'environnement dans ce fichier seront automatiquement renseignées au démarrage du conteneur Docker. Toutes les variables d'environnement définies dans le conteneur Docker seront disponibles, vous permettant de personnaliser le comportement du service en fonction de l'environnement de déploiement.
-- [docker-compose.yml](./docker/docker-compose.yml) : Le système s'appuie sur [docker-compose.yml](./docker/docker-compose.yml) pour démarrer.
+- [docker-compose.yml](docker/docker-compose-x86.yml) : Le système s'appuie sur [docker-compose.yml](docker/docker-compose-x86.yml) pour démarrer.
 
 > Le fichier [./docker/README](./docker/README.md) fournit une description détaillée des paramètres d'environnement et des configurations de services qui peuvent être utilisés comme `${ENV_VARS}` dans le fichier [service_conf.yaml.template](./docker/service_conf.yaml.template).
 
-Pour mettre à jour le port HTTP de service par défaut (80), accédez à [docker-compose.yml](./docker/docker-compose.yml) et changez `80:80` en `<YOUR_SERVING_PORT>:80`.
+Pour mettre à jour le port HTTP de service par défaut (80), accédez à [docker-compose.yml](docker/docker-compose-x86.yml) et changez `80:80` en `<YOUR_SERVING_PORT>:80`.
 
 Les mises à jour des configurations ci-dessus nécessitent un redémarrage de tous les conteneurs pour prendre effet :
 

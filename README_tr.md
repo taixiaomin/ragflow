@@ -256,11 +256,11 @@ Sistem yapılandırmaları söz konusu olduğunda, aşağıdaki dosyaları yöne
 
 - [.env](./docker/.env): `SVR_HTTP_PORT`, `MYSQL_PASSWORD` ve `MINIO_PASSWORD` gibi temel sistem ayarlarını içerir.
 - [service_conf.yaml.template](./docker/service_conf.yaml.template): Arka uç hizmetlerini yapılandırır. Bu dosyadaki ortam değişkenleri, Docker konteyneri başladığında otomatik olarak doldurulacaktır. Docker konteyneri içinde ayarlanan tüm ortam değişkenleri kullanıma hazır olacak ve hizmet davranışını dağıtım ortamına göre özelleştirmenize olanak tanıyacaktır.
-- [docker-compose.yml](./docker/docker-compose.yml): Sistem, başlatılmak için [docker-compose.yml](./docker/docker-compose.yml) dosyasına dayanır.
+- [docker-compose.yml](docker/docker-compose-x86.yml): Sistem, başlatılmak için [docker-compose.yml](docker/docker-compose-x86.yml) dosyasına dayanır.
 
 > [./docker/README](./docker/README.md) dosyası, [service_conf.yaml.template](./docker/service_conf.yaml.template) dosyasında `${ENV_VARS}` olarak kullanılabilen ortam ayarları ve hizmet yapılandırmalarının ayrıntılı bir açıklamasını sağlar.
 
-Varsayılan HTTP sunucu portunu (80) değiştirmek için [docker-compose.yml](./docker/docker-compose.yml) dosyasında `80:80` ifadesini `<SUNUCU_PORTUNUZ>:80` olarak değiştirin.
+Varsayılan HTTP sunucu portunu (80) değiştirmek için [docker-compose.yml](docker/docker-compose-x86.yml) dosyasında `80:80` ifadesini `<SUNUCU_PORTUNUZ>:80` olarak değiştirin.
 
 Yukarıdaki yapılandırma değişikliklerinin etkili olması için tüm konteynerlerin yeniden başlatılması gerekir:
 

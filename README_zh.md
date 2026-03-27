@@ -257,7 +257,7 @@
 
 - [.env](./docker/.env)：存放一些基本的系统环境变量，比如 `SVR_HTTP_PORT`、`MYSQL_PASSWORD`、`MINIO_PASSWORD` 等。
 - [service_conf.yaml.template](./docker/service_conf.yaml.template)：配置各类后台服务。
-- [docker-compose.yml](./docker/docker-compose.yml): 系统依赖该文件完成启动。
+- [docker-compose.yml](docker/docker-compose-x86.yml): 系统依赖该文件完成启动。
 
 请务必确保 [.env](./docker/.env) 文件中的变量设置与 [service_conf.yaml.template](./docker/service_conf.yaml.template) 文件中的配置保持一致！
 
@@ -265,7 +265,7 @@
 
 > [./docker/README](./docker/README.md) 解释了 [service_conf.yaml.template](./docker/service_conf.yaml.template) 用到的环境变量设置和服务配置。
 
-如需更新默认的 HTTP 服务端口(80), 可以在 [docker-compose.yml](./docker/docker-compose.yml) 文件中将配置 `80:80` 改为 `<YOUR_SERVING_PORT>:80`。
+如需更新默认的 HTTP 服务端口(80), 可以在 [docker-compose.yml](docker/docker-compose-x86.yml) 文件中将配置 `80:80` 改为 `<YOUR_SERVING_PORT>:80`。
 
 > 所有系统配置都需要通过系统重启生效：
 >
