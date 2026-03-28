@@ -129,19 +129,19 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '${HOME}/.docker-apps/ragflow/osdata/data'
+      device: '${HOME}/.docker-apps/applications/ragflow/osdata/data'
   infinity_data:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '${HOME}/.docker-apps/ragflow/infinity/data'
+      device: '${HOME}/.docker-apps/applications/ragflow/infinity/data'
   tei_data:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '${HOME}/.docker-apps/ragflow/tei/data'
+      device: '${HOME}/.docker-apps/applications/ragflow/tei/data'
 
 networks:
   ragflow:
